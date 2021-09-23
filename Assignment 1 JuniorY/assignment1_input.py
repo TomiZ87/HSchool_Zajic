@@ -1,40 +1,48 @@
-name = input("Zadaj svoje meno: ")
+print("Exercise 2: Name")
+name = input("Enter your first name: ")
 print("Tomáš")
 
-name = input("Zadaj svoje meno: ")
+print("Exercise 3: variable + string")
+name = input("Enter your first name: ")
 print("Volám sa "+ name)
 
-name = input("Zadaj svoje meno: ")
-last_name = input("Zadaj svoje priezvisko: ")
+print("Exercise 4: First Name and Last Name")
+name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
 print(name + " a " + last_name)
 
-a = input("Zadaj ľubovoľné slovo: ")
+print("Exercise 5: Overwrithing variables")
+a = input("Enter any word: ")
 print(a)
-a = input("Zadaj druhé ľubovoľné slovo: ")
+a = input("Enter 2nd any word: ")
 print(a)
 
-a = "Today is 23 Sept. 2021"
+print("Exercise 6: Putting a variable to another variable")
+a = input("Enter any sentence:")
 b = a
 print(a)
 print(b)
-b = "Today is Thursday"
+b = input("Enter 2nd any sentence:")
 print(a)
 print(b)
 
-a = "testing"
-b = "Tomáš"
+print("Exercise 7: Swaping and Joining Sentences")
+a = input("Enter any sentence:")
+b = input("Enter 2nd any sentence:")
 c = a
 a = b
 b = c
 print(a + b)
 
-dog = "cat"
-cat = "dog"
+print("Exercise 8: Enter the given words")
+dog = input("Enter the word cat")
+cat = input("Enter the word dog")
 print(dog)
 print(cat)
 
-word1 = "desu."
-word2 = "Tomu "
-word3 = "wa "
-word4 = "Watashi "
-print(word4 + word3 + word2 + word1)
+print("Exercise 9: Creating 4 word sentence from the back")
+word1 = input("Enter 4th word")
+word2 = input("Enter 3rd word")
+word3 = input("Enter 2nd word")
+word4 = input("Enter 1st word")
+print(word4 + " " + word3 + " " + word2 + " " + word1)
