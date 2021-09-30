@@ -6,7 +6,7 @@ print(num1 + num2)
 
 print("Exercise 2: Input + Years")
 name = str(input("Enter your name: "))
-age = int(input("Enter your age:"))
+age = int(input("Enter your age: "))
 date = datetime.datetime.now()
 age100 = int(date.year - age + 100)
 print("Your name is " + name + ", you were born in " + str(age) + ". You will be 100 years old in " + str(age100))
