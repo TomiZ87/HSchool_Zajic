@@ -1,6 +1,6 @@
 print("Exercise 2: Name")
 name = input("Enter your first name: ")
-print("Tomáš")
+print(name)
 
 print("Exercise 3: variable + string")
 name = input("Enter your first name: ")
@@ -11,7 +11,7 @@ name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 print(name + " a " + last_name)
 
-print("Exercise 5: Overwrithing variables")
+print("Exercise 5: Overwriting variables")
 a = input("Enter any word: ")
 print(a)
 a = input("Enter 2nd any word: ")
