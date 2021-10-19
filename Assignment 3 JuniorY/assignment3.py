@@ -29,7 +29,7 @@ num2 = float(input("Enter second number: "))
 print("Multiple of " + str(num1) + " and " + str(num2) + " is " + str(num1 * num2))
 
 print("Exercise 4: The days of the week")
-numberDay = str(input("Write the number from 1 to 7, this numbers represent the days in week"))
+numberDay = str(input("Write the number from 1 to 7, this numbers represent the days in week: "))
 
 weekday = {
   "1": "Monday",
