@@ -1,0 +1,5 @@
+print("Exercise 5: Overwriting variables")
+a = input("Enter any word: ")
+print(a)
+a = input("Enter 2nd any word: ")
+print(a)

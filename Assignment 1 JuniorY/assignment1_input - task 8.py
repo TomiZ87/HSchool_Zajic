@@ -1,0 +1,5 @@
+print("Exercise 8: Enter the given words")
+dog = input("Enter the word cat: ")
+cat = input("Enter the word dog: ")
+print(dog)
+print(cat)
