@@ -23,15 +23,9 @@ same_month = 0
 age = current_year - birth_year - 1
 
 if current_month > 12 or current_month < 0:
-    age_error = age_error + "Error: Invalid Current Month! "
     error_c_month = 1
-    age = str(age)
-    age = "Unknown"
 if birth_month > 12 or current_month < 0:
-    age_error = age_error + "Error: Invalid Birth Month! "
     error_b_month = 1
-    age = str(age)
-    age = "Unknown"
 
 if current_month > birth_month and error_c_month == 0 and error_b_month == 0:
     age += 1
@@ -40,9 +34,12 @@ if current_month == birth_month and error_c_month == 0 and error_b_month == 0:
 if bool(same_month) and current_day >= birth_day:
     age += 1
 
-if int(age) < 0 and error_c_month == 0 and error_b_month == 0:
+if age < 0 and error_c_month == 0 and error_b_month == 0:
     age_error = age_error + "Error: The User Was not born yet! "
-
+if error_b_month == 1 or error_c_month == 1:
+    age = str(age)
+    age = "Unknown"
+    age_error = "Error: Invalid Month! "
 if error_c_month == 0:
     current_date = str(current_day) + "." + str(current_month) + "." + str(current_year)
 else:
