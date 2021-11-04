@@ -24,7 +24,7 @@ age = current_year - birth_year - 1
 
 if current_month > 12 or current_month < 0:
     error_c_month = 1
-if birth_month > 12 or current_month < 0:
+if birth_month > 12 or birth_month < 0:
     error_b_month = 1
 
 if current_month > birth_month and error_c_month == 0 and error_b_month == 0:
