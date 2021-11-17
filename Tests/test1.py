@@ -15,7 +15,7 @@ first_name_error = ""
 last_name_error = ""
 job_error = ""
 
-age=1
+
 # 1.1 Age and Date Logic
 
 valid_current_month = 1
@@ -96,6 +96,8 @@ else:
     valid_birth_day = 0
 if bool(valid_current_day) and bool(valid_birth_day):
     valid_days = 1
+else:
+    valid_days = 0
 if bool(valid_months) and bool(valid_days):
     valid_date = 1
 else:
@@ -108,7 +110,7 @@ elif valid_date == 1 and current_month < birth_month or (current_month == birth_
     age = current_year - birth_year - 1
 if valid_date == 1 and age < 0:
     age_error = "The user hasn't been born yet" 
-    
+
 if not bool(valid_birth_day) or not bool(valid_current_day):
     age_error = "Entered birth or current day don't exist."
 if not bool(valid_birth_month) or not bool(valid_current_month):
@@ -137,7 +139,7 @@ if last_name == "":
     last_name = "Unknown"
 
 # 1.3 Job logic
-if valid_date == 1 and 0 < age < 18 and (job != "Student" or not job != "student"):
+if valid_date == 1 and 0 < age < 18 and (job != "Student" or job != "student"):
     job = "Unknown"
     job_error = "Error: The Student has got a job!!"
 elif valid_date == 1 and 0 < age < 18:
@@ -163,10 +165,10 @@ print("Job: " + job)
 
 # 1.4.2 Printing Errors
 if first_name_error != "":
-    print("First Name Error: " + first_name_error)
+    print("First Name: " + first_name_error)
 if last_name_error != "":
-    print("Last Name Error: " + last_name_error)
+    print("Last Name: " + last_name_error)
 if age_error != "":
     print("Age Error: " + age_error)
 if job_error != "":
-    print("Job Error: " + job_error)
+    print("Job: " + job_error)
