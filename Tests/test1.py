@@ -15,16 +15,12 @@ first_name_error = ""
 last_name_error = ""
 job_error = ""
 
-
 # 1.1 Age and Date Logic
 
 valid_current_month = 1
 valid_birth_month = 1
-valid_months = 1
-valid_current_day = 1
-valid_birth_day = 1
-valid_days = 1
 valid_date = 1
+age = 0
 
 # 1.1.2 Checking if the entered months are valid
 if current_month >= 1 and current_month <= 12:
@@ -36,69 +32,6 @@ if birth_month >= 1 and birth_month <= 12:
 else:
     valid_birth_month = 0
 if bool(valid_current_month) and bool(valid_birth_month):
-    valid_months = 1
-else:
-    valid_months = 0
-
-# 1.1.2 Checking if the entered days are valid
-if valid_current_month == 1 and current_month == 1 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 2 and current_day > 0 and (current_day <= 28 or (current_year % 4 == 0 and current_day <= 29)):
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 3 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 4 and current_day > 0 and current_day <= 30:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 5 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 6 and current_day > 0 and current_day <= 30:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 7 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 8 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 9 and current_day > 0 and current_day <= 30:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 10 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 11 and current_day > 0 and current_day <= 30:
-    valid_current_day = 1
-elif valid_current_month == 1 and current_month == 12 and current_day > 0 and current_day <= 31:
-    valid_current_day = 1
-else:
-    valid_current_day = 0
-
-if valid_birth_month == 1 and birth_month == 1 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 2 and birth_day > 0 and (birth_day <= 28 or (birth_year % 4 == 0 and birth_day <= 29)):
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 3 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 4 and birth_day > 0 and birth_day <= 30:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 5 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 6 and birth_day > 0 and birth_day <= 30:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 7 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 8 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 9 and birth_day > 0 and birth_day <= 30:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 10 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 11 and birth_day > 0 and birth_day <= 30:
-    valid_birth_day = 1
-elif valid_birth_month == 1 and birth_month == 12 and birth_day > 0 and birth_day <= 31:
-    valid_birth_day = 1
-else:
-    valid_birth_day = 0
-if bool(valid_current_day) and bool(valid_birth_day):
-    valid_days = 1
-else:
-    valid_days = 0
-if bool(valid_months) and bool(valid_days):
     valid_date = 1
 else:
     valid_date = 0
@@ -111,17 +44,15 @@ elif valid_date == 1 and current_month < birth_month or (current_month == birth_
 if valid_date == 1 and age < 0:
     age_error = "The user hasn't been born yet" 
 
-if not bool(valid_birth_day) or not bool(valid_current_day):
-    age_error = "Entered birth or current day don't exist."
 if not bool(valid_birth_month) or not bool(valid_current_month):
     age_error = "Entered birth or current month don't exist."
 
 # 1.1.4 Dates
-if bool(valid_current_month) and bool(valid_current_day):
+if bool(valid_current_month):
     current_date = str(current_day) + "." + str(current_month) + "." + str(current_year)
 else:
     current_date = "Unknown -> (" + str(current_day) + "." + str(current_month) + "." + str(current_year) + ")"
-if bool(valid_birth_month) and bool(valid_birth_day):
+if bool(valid_birth_month):
     birth_date = str(birth_day) + "." + str(birth_month) + "." + str(birth_year)
 else:
     birth_date = "Unknown -> (" + str(birth_day) + "." + str(birth_month) + "." + str(birth_year) + ")"
@@ -139,10 +70,10 @@ if last_name == "":
     last_name = "Unknown"
 
 # 1.3 Job logic
-if valid_date == 1 and 0 < age < 18 and (job != "Student" or job != "student"):
+if valid_date == 1 and age < 18 and age > 0 and job != "student" and job != "":
     job = "Unknown"
     job_error = "Error: The Student has got a job!!"
-elif valid_date == 1 and 0 < age < 18:
+elif valid_date == 1 and age < 18 and age > 0:
     job = "Student"
 if job == "":
     job_error = "Error: No job was entered"
