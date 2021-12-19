@@ -52,7 +52,8 @@ def task5():
         if (number % x == 0):
             numbers = number / x
             result.append(numbers)
-    print("Dividers of number "+ str(number) + "is " +str(result))
+    result.append(1.0)
+    print("Dividers of number "+ str(number) + " is " +str(result))
 
 def task6():
     print("Exercise 6: Is it prime number?")
