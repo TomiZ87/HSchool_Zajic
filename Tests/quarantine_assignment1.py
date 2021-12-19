@@ -88,6 +88,7 @@ def task8():
     numbers.sort(reverse=True)
     print("Result array: " + str(numbers))
 
+#When you star this program you can chose the function from 1 to 8. Each task number corresponds to the number of function you can choose.
 task_num = int(input("Enter the number of the task (1-8): "))
 if task_num == 1:
     task1()
