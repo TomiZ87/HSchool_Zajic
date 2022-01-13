@@ -1,0 +1,122 @@
+# 1. Vypíše výsledok 6.1? Áno/Nie
+a = "2.3"
+b = "3.8"
+print(int(a) + int(b))
+
+# 2. Vzpíše výsledok 7?  Áno/Nie
+a = 2
+b = 5
+print(float(a) + float(b))
+
+# 3. Čo vypíše nasledujúci print?
+# A: 3 > 2 B: 3 C: True D: 2
+print(3 > 2)
+
+# 4. Čo sa vypíše v tomto programe?
+# A: ANO B: NIE C: Nevypíše sa nič D: ANO NIE
+if 1 < 2:
+    print("ANO")
+print("NIE")
+
+# 5. Čo sa vypíše v tomto programe?
+# A: ANO B: NIE C: Nevypíše sa nič D: ANO NIE
+if 1 == 2:
+    print("ANO")
+    print("NIE")
+
+# 6. Čo sa načíta do premennej a, ak po spustení programu
+# napíšem do klávesnice číslo 2 a stisnem enter?
+# A: Nič B: b C: 2 D: "2"
+a = input("b")
+
+# 7. Vypíše sa v tomto programeslovo YES? Áno/Nie
+if 6 > 5 and 7 > 6:
+    print("YES")
+
+# 8. Vypíše sa v tomto programeslovo YES? Áno/Nie
+if 6 > 5 or 7 < 6:
+    print("YES")
+
+# 9. Vypíše sa v tomto programeslovo YES? Áno/Nie
+if (6 > 5 or 7 > 6) and (5 > 10 or 11 > 20):
+    print("YES")
+
+# 10. Vypíš tento program slovo YES? Áno/Nie
+if "a" in "banana":
+    print("YES")
+
+# 11. Vypíš tento program slovo YES? Áno/Nie
+if "c" in "banana":
+    print("YES")
+
+# 12. Vypíš tento program slovo YES? Áno/Nie
+if "c" in "banana" or "d":
+    print("YES")
+
+# 13. Čo vypíš nasledujúci program?
+a = 0
+if a > 0:
+    print("Kladné")
+elif a < 0:
+    print("Záporné")
+
+# 14. Čo vypíš nasledujúci program?
+a = 0
+if a > 0:
+    print("Kladné")
+else:
+    print("Záporné")
+
+# 15. Aké čísla vypíše nasledujúci program?
+for a in range(0, 5):
+    print(a)
+
+# 16. Aké číslo vypíše nasledujúci program?
+a = [0, 1, 2, 3, 4]
+print(a[3])
+
+# 17 Čo vypíše nasledujúci program
+a = 5.1
+b = 6.5
+print(float(a) + float(b))
+
+# 18 Čo vypíše nasledujúci program
+a = 5.1
+b = 6.5
+print(str(a) + str(b))
+
+# 19 Čo vypíše nasledujúci program
+a = 5.1
+b = 6.5
+print(int(a) + int(b))
+
+# 20 Čo vypíše nasledujúci program
+a = 5.1
+b = 6.5
+print(bool(a) + bool(b))
+
+# 21 Čo vypíše nasledujúci program
+a = 5.1
+b = 6.5
+print(str(a) + int(b))
+
+# 22. Vypíše výsledok 6.1? Áno/Nie
+a = "2.3"
+b = "3.8"
+print(float(a) + float(b))
+
+# 23. Čo vypíše nasledujúci print?
+# A: 3 > 2 B: 3 C: True D: 2
+print("3 > 2")
+
+# 24 Normálne programujte. Vypíšte všetky čísel deliteľné
+# 7 alebo 5 nachádzajúce sa medzi číslom 1 a 100 (vrátne)
+result1 = []
+result2 = []
+for x in range(1, 101):
+    if (x % 7 == 0):
+        result1.append(x)
+    if (x % 5 == 0):
+        result2.append(x)
+print("Numbers divisible by 7 are " + str(result1))
+print("Numbers divisible by 5 are " + str(result2))
