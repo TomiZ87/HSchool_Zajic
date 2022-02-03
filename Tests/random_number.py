@@ -20,10 +20,11 @@ if max_number > 0:
             else:
                 print("The number is lower!")
         if guess == guessing_num:
-            print("You won within the entered attempts, Guessed Number is indeed " + str(guessing_num));
+            print("You won within the " +str(cur_attempt)+ " attempts, Guessed Number is indeed " + str(guessing_num));
+            print("You entered these wrong guesses " + str(numbers));
             break;
         if cur_attempt == attempts:
             print("You lose, you used all your " + str(attempts) + " attempts. The correct answer was " + str(guessing_num));
-            print("You entered these numbers " + str(numbers));
+            print("You entered these wrong guesses " + str(numbers));
             break;
         cur_attempt += 1;
