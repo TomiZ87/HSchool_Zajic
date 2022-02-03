@@ -28,3 +28,5 @@ if max_number > 0:
             print("You entered these wrong guesses " + str(numbers));
             break;
         cur_attempt += 1;
+else:
+    print("You entered the maximal value lower than 0. Restart the program to continue!")
