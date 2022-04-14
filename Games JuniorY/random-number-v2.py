@@ -3,7 +3,7 @@ import numbers
 import random
 players_num = 0
 while players_num < 1 or players_num > 5:
-    players_num = int(input("How many players? 1-5 : "))
+    players_num = int(input("How many players? 2-5 : "))
 
 players = []
 
@@ -50,6 +50,7 @@ while round < attempts and not win:
                     num1 = players[x]["numbers"][round-1]
             print(str(attempts) + " attempts left!")
             if players[x]["numbers"][round-1] == guessing_num:
+                players[x]["numbers"][round-1] = str(players[x]["numbers"][round-1]) + " <-- Guessed Number"
                 print("\n\nWow, " +str(players[x]["nickname"])+ " You are right, the correct number is " +str(guessing_num))
                 winwin = True
         else:
@@ -69,3 +70,4 @@ print("Here is your history:")
 for x in range(1, round):
     for y in range(0, players_num):
         print("Round " +str(x) + " " +players[y]["nickname"]+ ": " +str(players[y]["numbers"][x-1]))
+print("You had " +str(attempts)+ " attempts left!")
