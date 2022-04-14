@@ -1,10 +1,10 @@
 from decimal import Rounded
 import numbers
 import random
-players_num = 0
+players_num = -1
 print("Random Number Game: ")
-while players_num < 1 or players_num > 5:
-    players_num = int(input("How many players? 2-5 : "))
+while players_num < 0 or players_num > 5:
+    players_num = int(input("How many players? 1-5 : "))
 
 players = []
 
@@ -29,6 +29,7 @@ attempts = int((num2-num1)/2)
 guessing_num = random.randint(num1, num2)
 round = 1
 eachattempt = int(attempts / players_num)
+print("Together you have " + str(attempts) + " attempts and individually you have " +str(eachattempt) + " attempts left!")
 
 win = False
 winwin = False
@@ -41,7 +42,6 @@ while round < attempts and not win:
             else:
                 players[x]["numbers"].append(random.randint(num1, num2))
                 print(str(players[x]["nickname"])+ " Guess: " +str(players[x]["numbers"][round-1]))
-            attempts -= 1
             
             if players[x]["numbers"][round-1] > guessing_num:
                 print("The number is lower!")
@@ -51,6 +51,7 @@ while round < attempts and not win:
                 print("The number is higher!")
                 if num1 < players[x]["numbers"][round-1]:
                     num1 = players[x]["numbers"][round-1]
+            attempts -= 1
             print(str(attempts) + " attempts left!")
             if players[x]["numbers"][round-1] == guessing_num:
                 players[x]["numbers"][round-1] = str(players[x]["numbers"][round-1]) + " <-- Guessed Number"
@@ -63,9 +64,8 @@ while round < attempts and not win:
                 players[x]["numbers"].append((str("n/a")))
     if winwin:
         win = True
-    else: 
-        eachattempt -= 1
-        print("Each of you has " +str(eachattempt) + " attempts left!")
+    eachattempt -= 1
+    print("Each of you has " +str(eachattempt) + " attempts left!")
     round += 1
     
 
