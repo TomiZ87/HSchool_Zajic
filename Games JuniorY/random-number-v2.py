@@ -2,6 +2,7 @@ from decimal import Rounded
 import numbers
 import random
 players_num = 0
+print("Random Number Game: ")
 while players_num < 1 or players_num > 5:
     players_num = int(input("How many players? 2-5 : "))
 
@@ -27,6 +28,7 @@ print("The range is " +str(num1) + "-" + str(num2))
 attempts = int((num2-num1)/2)
 guessing_num = random.randint(num1, num2)
 round = 1
+eachattempt = int(attempts / players_num)
 
 win = False
 winwin = False
@@ -40,6 +42,7 @@ while round < attempts and not win:
                 players[x]["numbers"].append(random.randint(num1, num2))
                 print(str(players[x]["nickname"])+ " Guess: " +str(players[x]["numbers"][round-1]))
             attempts -= 1
+            
             if players[x]["numbers"][round-1] > guessing_num:
                 print("The number is lower!")
                 if num2 > players[x]["numbers"][round-1]:
@@ -60,6 +63,9 @@ while round < attempts and not win:
                 players[x]["numbers"].append((str("n/a")))
     if winwin:
         win = True
+    else: 
+        eachattempt -= 1
+        print("Each of you has " +str(eachattempt) + " attempts left!")
     round += 1
     
 
@@ -70,4 +76,5 @@ print("Here is your history:")
 for x in range(1, round):
     for y in range(0, players_num):
         print("Round " +str(x) + " " +players[y]["nickname"]+ ": " +str(players[y]["numbers"][x-1]))
-print("You had " +str(attempts)+ " attempts left!")
+print("Together you had " +str(attempts)+ " attempts left!")
+print("Each of you had " +str(eachattempt) + " attempts left!")
