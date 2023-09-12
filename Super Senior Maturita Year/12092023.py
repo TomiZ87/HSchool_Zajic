@@ -28,7 +28,7 @@ while player_score[1] < winning_rounds and player_score[0] < winning_rounds:
         print ("Computer wins this round!")
         player_score[1] += 1
     round = round + 1
-    history.append("Round " +str(round)+ "Player: "+str(player_score[0]) + " " +str(display_roll(player))+"; Computer: " +str(player_score[1])+ " " +str(display_roll(computer)))
+    history.append("Round " +str(round)+ " -- Player: "+str(player_score[0]) + " " +str(display_roll(player))+"; Computer: " +str(player_score[1])+ " " +str(display_roll(computer)))
     print ("Player: "+str(player_score[0]) + "; Computer: " +str(player_score[1]))
 if player_score[0] == winning_rounds: print ("Player WINS")
 else: print ("COMPUTER WINS!")
