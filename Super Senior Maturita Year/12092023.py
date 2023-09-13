@@ -12,11 +12,10 @@ def display_roll(roll):
     else:roll_result = "Unknown"
     return roll_result
 while player_score[1] < winning_rounds and player_score[0] < winning_rounds:
-    guessing = True
-    while guessing:
+    while True:
         player = str(input("Player  Roll: "))
         player = player.lower()
-        if player in roll: guessing = False
+        if player in roll: break
         else: print("Invalid character. Please enter r for rock, p for paper, or s for scissors.")
     computer = random.choice(roll)
     print ("Computer Roll: " +str(computer))
