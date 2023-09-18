@@ -43,7 +43,7 @@ def main():
         round_num += 1
         player_moves[0][player] += 1
         player_moves[1][computer] += 1
-        history.append(f"\nRound {round_num} -- Player: {player_score[0]} {display_roll(player)}; Computer: {player_score[1]} {display_roll(computer)} {result}\n Statistics: Player: [r: {player_moves[0]['r']}; p: {player_moves[0]['p']}; s: {player_moves[0]['s']}]; Computer: [r: {player_moves[1]['r']}; p: {player_moves[1]['p']}; s: {player_moves[1]['s']}]")
+        history.append(f"\nRound {round_num} -- Player: {player_score[0]} {display_roll(player)}; Computer: {player_score[1]} {display_roll(computer)} {result}\n Statistics: Player: [r: {player_moves[0]['r']}, {round(player_moves[0]['r']/(player_moves[0]['r']+player_moves[0]['p']+player_moves[0]['s'])*100)}%; p: {player_moves[0]['p']}, {round(player_moves[0]['p']/(player_moves[0]['r']+player_moves[0]['p']+player_moves[0]['s'])*100)}%; s: {player_moves[0]['s']}, {round(player_moves[0]['s']/(player_moves[0]['r']+player_moves[0]['p']+player_moves[0]['s'])*100)}%]; Computer: [r: {player_moves[1]['r']}, {round(player_moves[1]['r']/(player_moves[1]['r']+player_moves[1]['p']+player_moves[1]['s'])*100)}%; p: {player_moves[1]['p']}, {round(player_moves[1]['p']/(player_moves[1]['r']+player_moves[1]['p']+player_moves[1]['s'])*100)}%; s: {player_moves[1]['s']}, {round(player_moves[1]['s']/(player_moves[1]['r']+player_moves[1]['p']+player_moves[1]['s'])*100)}%]")
         print(f"{result} Player: {player_score[0]}; Computer: {player_score[1]}")
     if player_score[0] == winning_rounds: print("Player WINS!")
     else: print("COMPUTER WINS!")

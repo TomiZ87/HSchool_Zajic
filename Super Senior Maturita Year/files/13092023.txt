@@ -3,3 +3,8 @@ Game: 14/09/2023 00:09:58
 Round 1 -- Player: 0 Paper; Computer: 1 Scissors Computer wins this round!
  Statistics: Player: [r: 0; p: 1; s: 0]; Computer: [r: 0; p: 0; s: 1]
 The most games were won with: S: 1; lost with P: 1; and draws with R: 0
+
+Game: 19/09/2023 00:42:05
+Round 1 -- Player: 1 Paper; Computer: 0 Rock Player wins this round!
+ Statistics: Player: [r: 0, 0%; p: 1, 100%; s: 0, 0%]; Computer: [r: 1, 100%; p: 0, 0%; s: 0, 0%]
+The most games were won with: P: 1; lost with R: 1; and draws with R: 0
