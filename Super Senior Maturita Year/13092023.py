@@ -29,17 +29,17 @@ def main():
         print("Computer Roll:", display_roll(computer))
         if player == computer:
             result = "It's a draw!"
-            outcome_counts[2][player] =+ 1
+            outcome_counts[2][player] += 1
         elif player + computer in p_win:
             result = "Player wins this round!"
             player_score[0] += 1
-            outcome_counts[0][player] =+ 1
-            outcome_counts[1][computer] =+ 1
+            outcome_counts[0][player] += 1
+            outcome_counts[1][computer] += 1
         else:
             result = "Computer wins this round!"
             player_score[1] += 1
-            outcome_counts[1][player] =+ 1
-            outcome_counts[0][computer] =+ 1
+            outcome_counts[1][player] += 1
+            outcome_counts[0][computer] += 1
         round_num += 1
         player_moves[0][player] += 1
         player_moves[1][computer] += 1
