@@ -15,7 +15,8 @@ def main():
     while choice not in (1, 2):
         print("\033[31mInvalid choice. Please enter 1 or 2.\033[0m")
         choice = get_integer_input("1 = Player, 2 = Computer Choice: ")
-    range = [get_integer_input("Please select the minimum range: "), get_integer_input("Please select the maximum range: ")]
+    range = [get_integer_input("Please select the first range: "), get_integer_input("Please select the second range: ")]
+    range.sort()
     guesses = round(((range[1]-range[0])/4)+1)
     guess = int(random.randrange(range[0], range[1]))
     while guesses > 0:
