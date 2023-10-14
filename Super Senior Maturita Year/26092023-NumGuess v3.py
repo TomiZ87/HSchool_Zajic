@@ -7,7 +7,7 @@ def generate_rand_num(range1, range2):
     return random.randint(range1, range2)
 def get_player_guess(min_value, max_value):
     while True:
-        guess = get_integer_input(f"Guess the number ({min_value}-{max_value}): ")
+        guess = get_integer_input(f"Guess the number ({min_value} - {max_value}): ")
         if min_value <= guess <= max_value: return guess
         else: print("Your guess is out of range. Try again!")
 def get_integer_input(prompt):
@@ -18,7 +18,7 @@ def get_integer_input(prompt):
         except ValueError: print("\033[31mInvalid input. Please enter a valid number.\033[0m")
 def game_mechanics(guess, guesses, range1, range2, array):
     while guesses > 0:
-        if array is None: player = get_player_guess(range1, range2)
+        player = get_player_guess(range1, range2)
         guesses -= 1
         if player > guess: print("The number is lower! Guesses left:", guesses)
         elif player < guess: print("The number is higher! Guesses left:", guesses)
@@ -35,26 +35,27 @@ def set_both_ranges_mode(choice):
 def set_num_from_array():
     while True: 
         choices = input("Please enter the array in the following form: num1,num2,num3... : ")
-        if choices.lstrip('-').lstrip(',').isdigit(): break
-        else: print("Wrong format. Try again!")
-    choice_array = choices.split(',')
-    for i in range(0, len(choice_array)): choice_array[i] = int(choice_array[i])
-    # return result, guess
+        number_list = choices.split(',')
+        while('' in number_list): number_list.remove('')
+        if all(val.lstrip('-').isdigit() for val in number_list):
+            number_list = [int(val) for val in number_list]
+            guess = random.choice(number_list)
+            guesses = len(number_list)/2
+            range1 = min(number_list)
+            range2 = max(number_list)
+            result = game_mechanics(guess, guesses, range1, range2, number_list)
+            return result, guess
+        else: print("Invalid input. Please provide a list of integers separated by commas.")
 def main():
     choice = get_integer_input("1 = Mode set Range, 2 = Mode set Range and 0, 3 = Range from array -- Choice: ")
     while choice not in (1, 2, 3):
         print("\033[31mInvalid choice. Please enter 1, 2 or 3.\033[0m")
         choice = get_integer_input("1 = Mode set Range, 2 = Mode set Range and 0, 3 = Range from array -- Choice: ")
     match choice:
-        case 1:
-            result = set_both_ranges_mode(1)
-        case 2:
-            result = set_both_ranges_mode(2)
-        case 3:
-            result = set_num_from_array()
-        case _:
-            print("1 = Mode set Range, 2 = Mode set Range and 0, 3 = Range from array")
+        case 1: result = set_both_ranges_mode(1)
+        case 2: result = set_both_ranges_mode(2)
+        case 3: result = set_num_from_array()
+        case _: print("1 = Mode set Range, 2 = Mode set Range and 0, 3 = Range from array")
     if result[0]: print("Player has won!")
     else: print("Out of guesses. The correct number was: ", result[1])
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
