@@ -16,9 +16,7 @@ def main():
             final = '0' + final
         elif number % 2 == 1:
             final = '1' + final
+            if number == 1: break
             number = math.floor(number / 2)
-        if number == 1:
-            final = '1' + final
-            break
     print("Number in binary: " + final)
 if __name__ == "__main__": main()
