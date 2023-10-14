@@ -5,11 +5,16 @@ def generate_rand_num(range1, range2):
     current_time = datetime.now()
     random.seed(current_time.second * 1000 + round(current_time.microsecond // 1000))
     return random.randint(range1, range2)
-def get_player_guess(min_value, max_value):
+def get_player_guess(min_value, max_value, array):
     while True:
+        if array: print("These are your options: " +str(array))
         guess = get_integer_input(f"Guess the number ({min_value} - {max_value}): ")
-        if min_value <= guess <= max_value: return guess
-        else: print("Your guess is out of range. Try again!")
+        if array:
+            if guess in array: return guess
+            else: print("You entered a number that is not in the array. Try again!")
+        else:
+            if min_value <= guess <= max_value: return guess
+            else: print("Your guess is out of range. Try again!")
 def get_integer_input(prompt):
     while True:
         try:
@@ -18,7 +23,7 @@ def get_integer_input(prompt):
         except ValueError: print("\033[31mInvalid input. Please enter a valid number.\033[0m")
 def game_mechanics(guess, guesses, range1, range2, array):
     while guesses > 0:
-        player = get_player_guess(range1, range2)
+        player = get_player_guess(range1, range2, array)
         guesses -= 1
         if player > guess: print("The number is lower! Guesses left:", guesses)
         elif player < guess: print("The number is higher! Guesses left:", guesses)
@@ -28,7 +33,7 @@ def set_both_ranges_mode(choice):
     if choice == 1: range = [get_integer_input("Please select the first range: "), get_integer_input("Please select the second range: ")]
     elif choice == 2: range = [get_integer_input("Please select the range (the max or min is 0 for the second element of range): "), 0]
     range.sort()
-    guesses = round(((range[1]-range[0])/4)+1)
+    guesses = round(((range[1]-range[0])/4)+1, 0)
     guess = generate_rand_num(range[0], range[1])
     result = game_mechanics(guess, guesses, range[0], range[1], None)
     return result, guess
@@ -40,7 +45,7 @@ def set_num_from_array():
         if all(val.lstrip('-').isdigit() for val in number_list):
             number_list = [int(val) for val in number_list]
             guess = random.choice(number_list)
-            guesses = len(number_list)/2
+            guesses = round((len(number_list)/2), 0)
             range1 = min(number_list)
             range2 = max(number_list)
             result = game_mechanics(guess, guesses, range1, range2, number_list)
