@@ -51,16 +51,19 @@ number = 0
 while (0 <= number <= 100):
     number=int(input("Add number: "))
     number_list.append(number)
+print(number_list)
 
 # 10 - Enter a number in range 0 and 100 using while cycle (the last entered element is not in the list)
+number_list = []
 number = 0
 while (0 <= number <= 100):
     number=int(input("Add number: "))
+    if 0 <= number <= 100: number_list.append(number)
+print(number_list)
 
 # 11 - Enter a number in range that you set using while cycle
 start = int(input("Add start: "))
 end = int(input("Add end: "))
 number = random.randint(start, end)
-while (start <= number <= end):
+while (start <= number < end):
     number=int(input("Add number: "))
-    number_list.append(number)
