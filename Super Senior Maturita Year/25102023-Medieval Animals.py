@@ -23,4 +23,4 @@ if choice == 1 or choice == 2:
             animals_to_buy_copy.remove(chosen_animal)
         else: break
     owned_animals.sort()
-    print("Remaining animals to buy " + str(animals_to_buy_copy) + "; Animals you own" + str(owned_animals) + "; Remaining money" + str(money))
+    print("Remaining animals to buy " + str(animals_to_buy_copy) + "; Animals you own " + str(owned_animals) + "; Remaining money " + str(money))
