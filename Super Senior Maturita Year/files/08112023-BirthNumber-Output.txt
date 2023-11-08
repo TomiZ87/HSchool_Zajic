@@ -1,36 +1,67 @@
-Birth Number Program: 08/11/2023 23:03:35
-0. - 010101/1234; Date of birth is: 01.1.2001; Gender: Male
-1. - 051231/5678; Date of birth is: 31.12.2005; Gender: Male
-2. - 990630/9012; Date of birth is: 30.6.1999; Gender: Male
-3. - 030315/7890; Date of birth is: 15.3.2003; Gender: Male
-4. - 080812/3456; Date of birth is: 12.8.2008; Gender: Male
-5. - 910512/1234; Date of birth is: 12.5.1991; Gender: Male
-6. - Invalid Day: '45' = 910545/1234
-7. - 761228/5678; Date of birth is: 28.12.1976; Gender: Male
-8. - 881003/9012; Date of birth is: 03.10.1988; Gender: Male
-9. - 600715/7890; Date of birth is: 15.7.1960; Gender: Male
-10. - 700619/3456; Date of birth is: 19.6.1970; Gender: Male
-11. - 001001/1234; Date of birth is: 01.10.2000; Gender: Male
-12. - 150101/5678; Date of birth is: 01.1.2015; Gender: Male
-13. - 060215/9012; Date of birth is: 15.2.2006; Gender: Male
-14. - 110303/7890; Date of birth is: 03.3.2011; Gender: Male
-15. - 510812/3456; Date of birth is: 12.8.1951; Gender: Male
-16. - 010501/1234; Date of birth is: 01.5.2001; Gender: Male
-17. - 651231/5678; Date of birth is: 31.12.1965; Gender: Male
-18. - Invalid Month: '14' = 301401/4874
-19. - 601003/9012; Date of birth is: 03.10.1960; Gender: Male
-20. - 611201/7890; Date of birth is: 01.12.1961; Gender: Male
-21. - 506121/3456; Date of birth is: 21.11.1950; Gender: Female
-22. - Invalid Birth number Formatt - yymmdd/xxxx - 05747/75411
-23. - 005101/1234; Date of birth is: 01.1.2000; Gender: Female
-24. - 150331/5678; Date of birth is: 31.3.2015; Gender: Male
-25. - 601005/9012; Date of birth is: 05.10.1960; Gender: Male
-26. - Invalid Month: '13' = 571315/4884
-27. - 610330/7890; Date of birth is: 30.3.1961; Gender: Male
-28. - 610528/3456; Date of birth is: 28.5.1961; Gender: Male
-29. - 006012/1234; Date of birth is: 12.10.2000; Gender: Female
-30. - 105121/5678; Date of birth is: 21.1.2010; Gender: Female
-31. - 505606/9012; Date of birth is: 06.6.1950; Gender: Female
-32. - 601206/7890; Date of birth is: 06.12.1960; Gender: Male
-33. - 600529/3456; Date of birth is: 29.5.1960; Gender: Male
-34. - Invalid Day: '99' = 600599/3456
+Birth Number Program: 09/11/2023 00:31:14
+1. - 010101/1234; Date of birth is: 01.1.2001; Gender: Male
+2. - 051231/5678; Date of birth is: 31.12.2005; Gender: Male
+3. - 990630/9012; Date of birth is: 30.6.1999; Gender: Male
+4. - 030315/7890; Date of birth is: 15.3.2003; Gender: Male
+5. - 080812/3456; Date of birth is: 12.8.2008; Gender: Male
+6. - 910512/1234; Date of birth is: 12.5.1991; Gender: Male
+7. - Invalid Day: '45' = 910545/1234
+8. - 761228/5678; Date of birth is: 28.12.1976; Gender: Male
+9. - 881003/9012; Date of birth is: 03.10.1988; Gender: Male
+10. - 600715/7890; Date of birth is: 15.7.1960; Gender: Male
+11. - 700619/3456; Date of birth is: 19.6.1970; Gender: Male
+12. - 001001/1234; Date of birth is: 01.10.2000; Gender: Male
+13. - 150101/5678; Date of birth is: 01.1.2015; Gender: Male
+14. - 060215/9012; Date of birth is: 15.2.2006; Gender: Male
+15. - 110303/7890; Date of birth is: 03.3.2011; Gender: Male
+16. - 510812/3456; Date of birth is: 12.8.1951; Gender: Male
+17. - 010501/1234; Date of birth is: 01.5.2001; Gender: Male
+18. - 651231/5678; Date of birth is: 31.12.1965; Gender: Male
+19. - Invalid Month: '14' = 301401/4874
+20. - 601003/9012; Date of birth is: 03.10.1960; Gender: Male
+21. - 611201/7890; Date of birth is: 01.12.1961; Gender: Male
+22. - 506121/3456; Date of birth is: 21.11.1950; Gender: Female
+23. - Invalid Birth number Format - yymmdd/xxxx - 05747/75411
+24. - 005101/1234; Date of birth is: 01.1.2000; Gender: Female
+25. - 150331/5678; Date of birth is: 31.3.2015; Gender: Male
+26. - 601005/9012; Date of birth is: 05.10.1960; Gender: Male
+27. - Invalid Month: '13' = 571315/4884
+28. - 610330/7890; Date of birth is: 30.3.1961; Gender: Male
+29. - 610528/3456; Date of birth is: 28.5.1961; Gender: Male
+30. - 006012/1234; Date of birth is: 12.10.2000; Gender: Female
+31. - 105121/5678; Date of birth is: 21.1.2010; Gender: Female
+32. - 505606/9012; Date of birth is: 06.6.1950; Gender: Female
+33. - 601206/7890; Date of birth is: 06.12.1960; Gender: Male
+34. - 600529/3456; Date of birth is: 29.5.1960; Gender: Male
+35. - Invalid Day: '99' = 600599/3456
+Birth Number Program: 09/11/2023 00:31:15
+1. - 03.11.2000 F; Date of birth number is: 00613/xxxx
+2. - 15.07.1999 M; Date of birth number is: 990715/xxxx
+3. - 28.04.2001 M; Date of birth number is: 010428/xxxx
+4. - 12.08.1988 F; Date of birth number is: 885812/xxxx
+5. - 09.12.1996 M; Date of birth number is: 96129/xxxx
+6. - 24.03.1992 F; Date of birth number is: 925324/xxxx
+7. - 19.06.2003 M; Date of birth number is: 030619/xxxx
+8. - 05.02.1994 F; Date of birth number is: 94525/xxxx
+9. - 30.10.2005 F; Date of birth number is: 056030/xxxx
+10. - 27.09.1997 M; Date of birth number is: 970927/xxxx
+11. - 14.05.1985 M; Date of birth number is: 850514/xxxx
+12. - 23.01.1990 F; Date of birth number is: 905123/xxxx
+13. - 06.07.2002 F; Date of birth number is: 02576/xxxx
+14. - 02.04.1998 M; Date of birth number is: 98042/xxxx
+15. - 21.03.2010 F; Date of birth number is: 105321/xxxx
+16. - 10.12.1987 M; Date of birth number is: 871210/xxxx
+17. - 11.08.2008 M; Date of birth number is: 080811/xxxx
+18. - 29.06.1995 F; Date of birth number is: 955629/xxxx
+19. - 17.11.2004 F; Date of birth number is: 046117/xxxx
+20. - Invalid Gender: 'G' = 26.09.1991 G
+21. - Invalid Month: '13' = 08.13.1989 F
+22. - 25.05.2006 F; Date of birth number is: 065525/xxxx
+23. - 20.02.1993 M; Date of birth number is: 930220/xxxx
+24. - 18.04.1998 F; Date of birth number is: 985418/xxxx
+25. - 04.07.2007 M; Date of birth number is: 07074/xxxx
+26. - 07.01.2012 M; Date of birth number is: 12017/xxxx
+27. - Invalid Day: '43' = 43.03.1996 F
+28. - 22.12.1986 F; Date of birth number is: 866222/xxxx
+29. - 01.09.2009 M; Date of birth number is: 09091/xxxx
+30. - Invalid Date Format - DD.MM.YYYY M/F - 16.6.2004 M
