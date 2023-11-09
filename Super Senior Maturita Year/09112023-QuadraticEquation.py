@@ -1,4 +1,3 @@
-import re
 import math
 equation = input("Enter the equation: ")
 equation = equation.replace(" ", "").lower()
