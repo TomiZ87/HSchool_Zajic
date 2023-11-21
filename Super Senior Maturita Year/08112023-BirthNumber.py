@@ -16,10 +16,10 @@ def save(saveing_material, file):
     f.write("Birth Number Program: "+str(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\n"))
     for x in saveing_material: f.write(x)
     f.close()
-while True:
+choice = get_integer("1 -> To Birth Number to Date, 2 -> Date to Birth Number, 3 Quit the program: ")
+while choice != 3:
     birth_numbers = [] 
     output = []
-    choice = get_integer("1 -> To Birth Number to Date, 2 -> Date to Birth Number, 3 Quit the program: ")
     if choice == 1:
         load("08112023-BirthNumber-Input-1")
         for x in range(len(birth_numbers)):
@@ -75,5 +75,5 @@ while True:
                 else: output.append(str(x+1) + ". - Invalid Month: '" + str(month) + "' = " + birth_number + "\n")
             else: output.append(str(x+1) + ". - Invalid Date Format - DD.MM.YYYY M/F - " + birth_number + "\n")
         save(output, "08112023-BirthNumber-Output")
-    elif choice == 3: break
+    elif choice == 3: pass
     else: print("\033[31mInvalid choice. Please enter 1, 2, or 3.\033[0m")
