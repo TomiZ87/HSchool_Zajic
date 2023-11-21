@@ -13,5 +13,5 @@ for x in range(len(banknotes)):
     while num1 >= banknotes[x]:
         current_change += 1
         num1 -= banknotes[x]
-    if current_change != 0: print("You will have " +str(current_change) + " of " +str(banknotes[x]) + "€ bankones")
-if num1 != 0: print("You will have " +str(round(num1, 2)) + " euros") 
+    if current_change != 0: print("You will have " +str(current_change) + " of " +str(banknotes[x]) + "€ bankones.")
+if num1 != 0: print("You will have " +str(round(num1, 2)) + " euro coins.") 
