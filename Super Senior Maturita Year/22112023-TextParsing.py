@@ -16,7 +16,7 @@ def get_integer(promt, higher_limit):
         except ValueError: print("\033[31mInvalid input. Please enter a valid number.\033[0m")
 text = load("22112023-TextParsing")
 lines = len(text)
-"".join(text)
+text = "".join(text)
 print("Text: " + text[0])
 sentences_num = text[0].count('?') + text[0].count('.') + text[0].count('!')
 num_first_sentences = get_integer("How many first sentences do you want to show? >> ", sentences_num)
