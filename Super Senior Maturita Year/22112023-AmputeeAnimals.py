@@ -1,9 +1,9 @@
 def animal_input():
     animal = " "
-    while animal != "yes" or animal != "no":
+    while animal.lower() != "yes" or animal.lower() != "no":
         animal = input("All Legs -> yes, otherwise no: ")
-        if animal == "yes" or animal == "Yes" or animal == "YES" or animal == "y": return "yes"
-        elif animal == "no" or animal == "No" or animal == "NO" or animal == "n": return "no"
+        if animal.lower() == "yes" or animal.lower() == "y": return "yes"
+        elif animal.lower() == "no" or animal.lower() == "n": return "no"
         else: print("Please enter yes or no.!!!!")
 def get_integer(promt):
     while True:
