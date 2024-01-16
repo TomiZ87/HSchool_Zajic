@@ -24,10 +24,8 @@ def view_all_results():
         return
     else:
         print("Printing all results:")
-        x = 1
         for y in db:
-            print("ID " + str(y.doc_id) + ". - " + str(y))
-            x += 1 
+            print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
     return
 
 def view_by_team():
@@ -37,31 +35,28 @@ def view_by_team():
     else:
         team = input("Thich team do you want to view? ")
         search = Query()
-        db.search(search['Team 1'] == team | search['Team 2'] == team)
-        for y in db:
-            print("ID " + str(y.doc_id) + ". - " + str(y))
-        while True:
-            try:
-                line = get_integer("Enter the ID: ")
-                if db.contains(doc_id = line):
-                    db.remove(doc_ids=[line])
-                else: print("ID Not Found")
-                return
-            except ValueError: print("\033[31mThe ID does Not exist.\033[0m")
+        db2 = db.search((search['Team 1'] == team) | (search['Team 2'] == team))
+        for y in db2:
+            print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
 
 def view_by_line():
     if len(db) == 0:
         print("There are no results to view")
         return
     else:
-        print("Which result do you want to view? Choose the line between 1 and " + str(len(db))) 
+        print("Printing all results:")
+        for y in db:
+            print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
         while True:
             try:
-                line = get_integer("Enter the line: ")
-                if 1 >= line >= (len(db)):
-                    print(db.all()[line - 1])
+                line = get_integer("Enter the ID: ")
+                if db.contains(doc_id = line):
+                    print("Line")
+                    y = db.get(doc_id = line)
+                    print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
+                else: print("ID Not Found")
                 return
-            except ValueError: print("\033[31mThe Line does Not exist.\033[0m")
+            except ValueError: print("\033[31mThe ID does Not exist.\033[0m")
 
 def delete_result():
     if len(db) == 0:
@@ -70,13 +65,12 @@ def delete_result():
     else:
         print("Which result do you want to delete? Choose the ID")
         for y in db:
-            print("ID " + str(y.doc_id) + ". - " + str(y))
+            print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
         while True:
             try:
                 line = get_integer("Enter the ID: ")
                 if db.contains(doc_id = line):
-                    print("Line")
-                    db.get(doc_id = line)
+                    db.remove(doc_ids=[line])
                 else: print("ID Not Found")
                 return
             except ValueError: print("\033[31mThe ID does Not exist.\033[0m")
@@ -88,7 +82,7 @@ def modify_result():
     else:
         print("Choose the ID to change")
         for y in db:
-            print("ID " + str(y.doc_id) + ". - " + str(y))
+            print("ID " + str(y.doc_id) + ". - Team 1 -- " + str(y['Team 1']) + " " + str(y['Score 1']) + ":" + str(y['Score 2']) + " " + str(y['Team 2']) + " -- Team 2")
         while True:
             try:
                 line = get_integer("Enter the ID: ")

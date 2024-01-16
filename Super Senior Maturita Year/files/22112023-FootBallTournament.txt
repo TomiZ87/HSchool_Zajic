@@ -1,1 +1,1 @@
-{"_default": {"3": {"Team 1": "NN", "Score 1": 88, "Team 2": "HJ", "Score 2": 4}}}
+{"_default": {"5": {"Team 1": "bilgym", "Score 1": 55, "Team 2": "bratislava", "Score 2": 44}, "6": {"Team 1": "trnava", "Score 1": 55, "Team 2": "bratislava", "Score 2": 10}, "7": {"Team 1": "bilgym", "Score 1": 70, "Team 2": "bratislava", "Score 2": 88}, "9": {"Team 1": "bilgym", "Score 1": 41, "Team 2": "trnava", "Score 2": 55}, "10": {"Team 1": "bilgym", "Score 1": 55, "Team 2": "trnava", "Score 2": 88}}}
