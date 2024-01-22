@@ -1,14 +1,22 @@
 A_size = [4, 3, 2, 1, 5]
 B_direction = [0, 1, 0, 0, 0]
-surivovrs = 0
+surivovrs = len(A_size)
 downstream = []
-for x in range(1, len(A_size)):
+if not len(A_size):
+        print("Survivors: " + str(surivovrs))
+        exit()
+for x in range(0, len(A_size)):
+    print(A_size[x])
     if B_direction[x] == 1:
         downstream.append(A_size[x])
     else:
-        if len(downstream) != 0:
-            while len(downstream) != 0:
-                if A_size[x] > downstream[-1]: break
-                else: downstream.pop()
-        else: surivovrs += 1
-print("Survivors: " +str(surivovrs + len(downstream)))
+        while len(downstream):
+            print(A_size[x] < downstream[-1])
+            if A_size[x] < downstream[-1]: 
+                surivovrs -= 1
+                break
+            else: 
+                surivovrs -= 1
+                downstream.pop()
+    print(downstream)
+print("Survivors: " + str(surivovrs))
