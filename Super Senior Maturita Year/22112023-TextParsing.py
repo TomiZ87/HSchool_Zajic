@@ -67,7 +67,7 @@ for z in sentences:
     if word_count > max_word_count:
         max_word_count = word_count
         max_sentence_by_words = z
-print("The longest sentence by letters (" + str(max_word_count) + "): "+ str(max_sentence_by_words))
+print("The longest sentence by words (" + str(max_word_count) + "): "+ str(max_sentence_by_words))
 
 word_counts = {} # Dictionary for each word
 for individual_word in words: word_counts[individual_word] = word_counts.get(individual_word, 0) + 1
