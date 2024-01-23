@@ -12,11 +12,8 @@ for x in range(0, len(A_size)):
     else:
         while len(downstream):
             print(A_size[x] < downstream[-1])
-            if A_size[x] < downstream[-1]: 
-                surivovrs -= 1
-                break
-            else: 
-                surivovrs -= 1
-                downstream.pop()
+            surivovrs -= 1
+            if A_size[x] < downstream[-1]: break
+            else: downstream.pop()
     print(downstream)
 print("Survivors: " + str(surivovrs))
