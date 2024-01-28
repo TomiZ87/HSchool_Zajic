@@ -14,6 +14,6 @@ if 8 <= len(password) <= 15:
         if 2 <= spacial <= 4:
             if digit >= 3: print("Password is valid")
             else: print("Not enough numbers")
-        else: print("Too much or too many special characters")
+        else: print("Too much or too few special characters")
     else: print("Lowercase != uppercase")
 else: print("Invalid num of characters 8-15")
