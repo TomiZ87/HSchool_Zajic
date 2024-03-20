@@ -1,0 +1,38 @@
+0200 - Všeobecná úverová banka
+0720 - Národná banka Slovenska
+0900 - Slovenská sporiteľňa
+1100 - Tatra banka
+1111 - UniCredit Bank Czech Republic and Slovakia
+3000 - Slovenská záručná a rozvojová banka
+3100 - Sberbank Slovensko
+5200 - OTP Banka Slovensko
+5600 - Prima banka Slovensko
+5900 - Prvá stavebná sporiteľňa
+6500 - Poštová banka
+7300 - ING Bank N.V.
+7500 - Československá obchodná banka
+7930 - Wüstenrot stavebná sporiteľňa
+8020 - Crédit Agricole Corporate and Investment Bank S.A. (v SR zrušená)
+8050 - COMMERZBANK Aktiengesellschaft
+8100 - Komerční banka
+8120 - Privatbanka
+8130 - Citibank Europe plc
+8160 - EXIMBANKA
+8170 - ČSOB stavebná sporiteľňa
+8191 - Centrálny depozitár cenných papierov SR
+8300 - HSBC Bank plc (v SR zrušená)
+8320 - J&T BANKA
+8330 - Fio banka
+8350 - The Royal Bank of Scotland (v SR zrušená)
+8360 - mBank S.A.
+8370 - Oberbank AB
+8380 - AXA Bank Europe (v SR zrušená)
+8390 - AKCENTA
+8400 - Banco Mais, S.A.
+8410 - ZUNO BANK AG (v SR zrušená)
+8420 - BKS BANK AG
+8430 - KDB Bank Europe Ltd.
+8440 - BNP PARIBAS PERSONAL FINANCE SA (Cetelem)
+9950 - First Data Slovakia
+9951 - Burza cenných papierov v Bratislave
+9952 - Trust Pay

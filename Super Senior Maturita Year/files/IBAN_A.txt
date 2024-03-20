@@ -1,0 +1,22 @@
+There are 40 ibans.
+There were 36 valid ibans.
+Slovakia 13
+Italy 4
+Estonia 2
+United Kingdom 1
+Switzerland 2
+Saudi Arabia 1
+Czechia 2
+Germany 4
+Finland 1
+Latvia 1
+Ukraine 1
+Turkey 1
+Faroe Islands 1
+Georgia 1
+France 1
+Tatra banka 5
+Prima banka Slovensko 4
+Slovenská sporiteľňa 2
+Poštová banka 1
+Československá obchodná banka 1
